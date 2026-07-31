@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CM Store Copilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-badge">
+            <img src="/logo-mark.svg" alt="CM Copilot" />
+          </div>
+          <div>
+            <h1>CM Copilot</h1>
+            <p>Assistente de Produção</p>
+          </div>
+        </div>
+
+        <button id="new-chat-btn" class="new-chat-btn" type="button">+ Nova Consulta</button>
+      </aside>
+
+      <section class="chat-panel">
+        <header class="chat-header">
+          <h2>Bem-vindo ao CM Copilot</h2>
+          <p>Como posso ajudar hoje?</p>
+          <div class="quick-actions">
+            <button class="chip" type="button" data-prompt="Dicas de 3D Print">Dicas de 3D Print</button>
+            <button class="chip" type="button" data-prompt="Manutenção Laser">Manutenção Laser</button>
+            <button class="chip" type="button" data-prompt="Orçamentos rápidos">Orçamentos Rápidos</button>
+          </div>
+        </header>
+
+        <section id="messages" class="messages" aria-live="polite"></section>
+
+        <form id="chat-form" class="chat-form">
+          <input
+            id="message-input"
+            type="text"
+            placeholder="Pergunte sobre máquinas, processos ou produtos..."
+            autocomplete="off"
+          />
+          <button id="send-btn" type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
